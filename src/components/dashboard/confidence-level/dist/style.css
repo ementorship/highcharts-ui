@@ -1,0 +1,23 @@
+.confidence-level-indecator {
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: 10px; }
+
+.confidence-level-indecator ul {
+  width: 70%;
+  margin: 0 auto; }
+
+.confidence-level-indecator ul li {
+  border-top: 10px solid #434343;
+  display: inline-block;
+  width: 50%;
+  padding: 20px 10px 10px; }
+
+.confidence-level-indecator ul li strong {
+  font-size: 20pt;
+  margin: 0 0 4px; }
+
+.confidence-level-indecator ul li p {
+  font-size: 12pt;
+  margin: 0; }

@@ -1,0 +1,13 @@
+[
+  {
+    "name":"Positive",
+    "count": 5660
+  },
+  {
+    "name":"Neutral",
+    "count": 2550
+  },
+  {
+    "name":"Negative",
+    "count": 1260
+  }]

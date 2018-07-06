@@ -1,0 +1,23 @@
+before_script:
+  - docker info
+
+deploy_develop:
+  script:
+    - sonar-scanner   -Dsonar.projectKey=$CI_PROJECT_NAME   -Dsonar.sources=.   -Dsonar.projectVersion=v$CI_JOB_ID -Dsonar.host.url=https://codequality.xenon.work   -Dsonar.login=244e23dcbc922934348a97c81fcd60a9ea452aff
+    - echo "dr.xenon.work/consulting/social-media:v$CI_JOB_ID" | xargs -I {} docker build -t {} -f Dockerfile.prod .
+    - docker push dr.xenon.work/consulting/social-media:v$CI_JOB_ID
+    # - echo "'"'{"spec":{"template":{"spec":{"containers":[{"name":"nexadash-react","env":[{"name":"REACT_APP_BRANCH","value":"'"$CI_COMMIT_REF_NAME"'"},{"name":"REACT_APP_BUILD","value":"'"$CI_JOB_ID"'"}]}]}}}}'"'" | xargs -I {} kubectl patch deployment nexadash-react -p {}  -n nexastack
+    - kubectl set image deployment/social-media social-media=dr.xenon.work/consulting/social-media:v$CI_JOB_ID -n consulting
+  environment:
+    name: devlop
+  only:
+  - devlop
+
+deploy_prod:
+  script:
+    - echo "dr.xenon.work/nexastack/nexadash-react:v$CI_JOB_ID" | xargs -I {} docker build -t {} --build-arg REACT_APP_BRANCH=master --build-arg REACT_APP_BUILD='4242' --build-arg REACT_APP_WS=wss://api.nexastack.xenon.team/logs --build-arg REACT_APP_AUTH_URL=https://auth.nexastack.xenon.team --build-arg REACT_APP_AUTH_API_URL=https://auth.nexastack.xenon.team/api --build-arg REACT_APP_API_VERSION=/v1 --build-arg REACT_APP_INTEGRATIONS=/integrations --build-arg REACT_APP_DEPLOYMENTS=/deployments --build-arg REACT_APP_RUNNER=/runner/api -f Dockerfile.production .
+    - docker push dr.xenon.work/nexastack/nexadash-react:v$CI_JOB_ID
+  environment:
+    name: uat
+  only:
+  - uat

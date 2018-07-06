@@ -1,0 +1,24 @@
+.form-group {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem; }
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin: 0 0 5px; }
+
+.form-group .input-ctrl {
+  width: 100%;
+  max-width: 100%;
+  min-height: 36px;
+  padding: .5rem 1.5rem;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  transition: 0.5s ease-in-out;
+  font-size: 1.4rem;
+  background: transparent; }
+
+.form-group .input-ctrl:focus {
+  background: #f6f6f9;
+  border-color: #3949AB; }

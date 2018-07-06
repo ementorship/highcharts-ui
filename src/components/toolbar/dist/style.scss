@@ -1,0 +1,76 @@
+@import '../../../static/css/color.scss';
+
+.mdc-toolbar.mdc-toolbar-header {
+	background: $theme-color;
+	position: relative;
+	z-index: 999;
+	position: fixed;
+}
+.material-icons.mdc-toolbar__menu-icon {
+	color: $white-color;
+}
+.mdc-toolbar__title.app-logo  img {
+	width: 180px;
+	max-width: 100%;
+}
+ .mdc-toolbar__title.app-logo {
+	color: $white-color;
+	padding: 12px 0px;
+	margin-left:0px;
+	font-family: $font-family;
+}
+.mdc-toolbar__row{
+	min-height: 55px;
+}
+.user-control {
+	margin: 0 24px 0 10px;
+	position: relative;
+}
+.user-control p {
+	font-size: 14pt;
+	margin: 0;
+	padding: 14px 0;
+	cursor: pointer;
+}
+.user-control p .fa.fa-user {
+	margin-right: 5px;
+}
+.user-control p .fa-angle-down {
+	margin-left: 3px;
+}
+.user-profile-menu li a {
+	padding: 10px 20px;
+	color: #434343;
+	font-size: 12pt;
+	display: block;
+	-webkit-transition: 0.3s ease all;
+	-o-transition: 0.3s ease all;
+	transition: 0.3s ease all;
+}
+.user-profile-menu li a:hover {
+	background: #eeeeee;
+}
+.user-profile-menu li:last-child a {
+	border-top: 1px solid #dddddd;
+}
+.user-profile-menu  li {
+	display: block;
+}
+.user-profile-menu {
+	position: absolute;
+	background: #fff;
+	max-width: 320px;
+	width: 200px;
+	right: -10px;
+	-webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+	border: 1px solid #198EEB;
+	display: none;
+	-webkit-transition: 0.5s ease all;
+	-o-transition: 0.5s ease all;
+	transition: 0.5s ease all;
+	border-radius: 0 0px 3px 3px;
+}
+.user-profile-menu.show{
+	display: block;
+}

@@ -1,0 +1,111 @@
+.post-list li {
+  display: block;
+  padding: 0 0 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eeeeee; }
+
+.post-list-item a {
+  font-size: 14px;
+  margin: 0 0 5px;
+  color: #3949AB;
+  font-weight: bold; }
+
+.date-time {
+  color: #999999;
+  font-size: 12px; }
+
+.post-list-item p {
+  margin: 0;
+  font-size: 14px; }
+
+.chart-container.post-outer {
+  height: 400px;
+  overflow: auto; }
+
+.fa.fa-arrow-down.negative {
+  color: #F94339;
+  font-size: 14pt;
+  margin-right: 10px; }
+
+.fa.fa-arrow-up.positive {
+  color: #90D046;
+  font-size: 14pt;
+  margin-right: 10px; }
+
+.trending {
+  font-size: 14pt;
+  margin-right: 8px;
+  color: #DD0606; }
+
+.post-content > a {
+  font-size: 11pt;
+  font-weight: bold;
+  color: #198EEB;
+  margin: 0; }
+
+.post-content p {
+  margin: 0 0 5px;
+  font-size: 15px;
+  line-height: 1.4; }
+
+.post-content {
+  display: grid;
+  width: auto; }
+
+.img-box {
+  display: inline-block;
+  width: 30%;
+  padding-right: 15px; }
+
+.img-box img {
+  max-width: 100%;
+  width: 100%; }
+
+.trending-post-list-item {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0 8px;
+  flex-direction: row; }
+
+.post-info .post-info-item {
+  display: inline-block;
+  font-size: 10pt;
+  color: #757575;
+  font-weight: bold;
+  margin: 0 20px 5px 0px;
+  position: relative; }
+
+.post-info .post-info-item::after {
+  position: absolute;
+  right: -14px;
+  content: "";
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  background: #757575;
+  top: 8px; }
+
+.post-info .post-info-item:last-child::after {
+  content: unset; }
+
+.post-content .post-source {
+  font-size: 10pt;
+  color: #555555; }
+
+.post-content .post-source a {
+  color: #198EEB; }
+
+.post-content .post-source.Youtube a {
+  color: #E02A20; }
+
+.post-content .post-source.Facebook a {
+  color: #3B5998; }
+
+.post-content .post-source.Twitter a {
+  color: #59ADEA; }
+
+.post-list li.no-data-found {
+  border: none;
+  text-align: center;
+  padding: 20% 10px; }

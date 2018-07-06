@@ -1,0 +1,142 @@
+.charts-properties-list {
+	display: -ms-grid;
+	display: grid;
+	width: 35%;
+	height: 100%;
+}
+.chart-genrator-input-box {
+	width: 48%;
+	display: flex;
+	flex-direction: row;
+	margin-right: 2%;
+}
+.chart-container {
+	padding: 2rem;
+	width: 100%;
+	border: 1px solid #E5E9F2;
+}
+.chart-genrator-outer {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	flex-direction: row;
+}
+.chart-genrator-header {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	border-bottom:1px solid #E5E9F2;
+}
+.container {
+	max-width: 100%;
+	width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.charts-properties-config {
+	display: block;
+	width: 65%;
+	padding: 0 2rem 2rem;
+}
+
+.chart-genrator-output {
+	display: grid;
+	width: 50%;
+}
+.chart-option-wrapper .tab-link {
+	display: block;
+	font-size: 1.5rem;
+	color: #26348e;
+	padding: 6px 12px;
+	cursor:pointer;
+}
+.chart-option-wrapper li {
+	display: block;
+}
+.chart-option-wrapper {
+	border-right: 1px solid #EAEAEA;
+	padding-bottom: 2rem;
+}
+.chart-option-wrapper .tab-link:hover {
+	background-color: #3949AB;
+	color: #ffffff;
+}
+.chart-option-wrapper .tab-link.active{
+	background-color: #26348e;
+	color: #ffffff;
+}
+.header {
+	background: #26348e;
+	padding: 1rem;
+	box-shadow: 0 2px 4px 1px rgba(32,33,36,.05) , 0 19px 38px 0 rgba(32,33,36,.04);
+	color: #ffffff;
+}
+.highchart-subheadings {
+	font-size: 2rem;
+	padding: 1rem;
+	margin: 0;
+	color: rgba(3,27,78,.7);
+}
+.form-h4 {
+	margin: 0 0 5px;
+	font-size: 1.8rem;
+	color: #26348E;
+}
+.chart-config-creater p {
+	margin: 0 0 10px;
+	font-size: 1.5rem;
+	line-height: 1.7;
+	color: #333;
+}
+/*highcarts header*/
+.chart-genrator-header h1 {
+	font-size: 2.5rem;
+	margin: 1rem 0 1.5rem;
+	color: #26348e;
+}
+.chart-genrator-header {
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	border-bottom: 1px solid #E5E9F2;
+	margin: 3rem 0;
+}
+/* color picker css*/
+.color-picker-btn {
+	width: 100%;
+	padding: 6px;
+	min-height: 36px;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+	background: transparent;
+	font-size: 11pt;
+	text-align: left;
+}
+.color-picker-wrapper {
+	position: absolute;
+	top: 45px;
+	z-index: 999;
+}
+.color-picker-goroup {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+.colorpicker-overlay {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition:0.5s ease all;
+}
+.color-picker-btn span {
+	width: 24px;
+	display: inline-block;
+	height: 24px;
+	position: absolute;
+	right: 6px;
+	top: 6px;
+}

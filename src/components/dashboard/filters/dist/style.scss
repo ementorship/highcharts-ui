@@ -1,0 +1,37 @@
+.filter-group label {
+	font-size: 14px;
+	margin: 0 0 2px;
+	display: block;
+}
+.filter-group .Select-control {
+	background-color: #fff;
+	border-color: #d9d9d9 #ccc #b3b3b3;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	color: #434343;
+	cursor: default;
+	display: table;
+	border-spacing: 0;
+	border-collapse: separate;
+	height: 40px;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.Select-placeholder, .Select--single > .Select-control .Select-value {
+	bottom: 0;
+	color: #aaa;
+	left: 0;
+	line-height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	max-width: 100%;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
