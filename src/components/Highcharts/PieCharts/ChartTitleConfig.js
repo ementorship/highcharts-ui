@@ -10,11 +10,6 @@ let titleAlignmentList =  [
   { "value": "center", "label": "center" },
   { "value": "right", "label": "right" }
 ];
-let verticalAlignmentList =  [
-  { "value": "top", "label": "top" },
-  { "value": "middle", "label": "middle" },
-  { "value": "bottom", "label": "bottom" }
-];
 let fontWeightList =  [
   { "value": "normal", "label": "normal" },
   { "value": "bold", "label": "bold" }
@@ -53,18 +48,15 @@ handleColorOverlay(){
     })
 }
 handleChartAligmnet(selectedOption){
-     this.updateTitleConfigData(this.props.chartTitleConfig.text, selectedOption.value, this.props.chartTitleConfig.margin, this.props.chartTitleConfig.useHTML, this.props.chartTitleConfig.verticalAlign, this.props.chartTitleConfig.style.color, this.props.chartTitleConfig.style.fontSize, this.props.chartTitleConfig.style.fontWeight, this.props.chartTitleConfig.style.fontFamily)
+     this.updateTitleConfigData(this.props.chartTitleConfig.text, selectedOption.value, this.props.chartTitleConfig.margin, this.props.chartTitleConfig.style.color, this.props.chartTitleConfig.style.fontSize, this.props.chartTitleConfig.style.fontWeight, this.props.chartTitleConfig.style.fontFamily)
  }
 
-handleVerticalAligmnet(selectedOption){
-     this.updateTitleConfigData(this.props.chartTitleConfig.text,  this.props.chartTitleConfig.align, this.props.chartTitleConfig.margin, this.props.chartTitleConfig.useHTML, selectedOption.value, this.props.chartTitleConfig.style.color, this.props.chartTitleConfig.style.fontSize, this.props.chartTitleConfig.style.fontWeight, this.props.chartTitleConfig.style.fontFamily)
- }
 handleFontWeight(selectedOption){
-     this.updateTitleConfigData(this.props.chartTitleConfig.text, this.props.chartTitleConfig.align, this.props.chartTitleConfig.margin, this.props.chartTitleConfig.useHTML, this.props.chartTitleConfig.verticalAlign, this.props.chartTitleConfig.style.color, this.props.chartTitleConfig.style.fontSize, selectedOption.value, this.props.chartTitleConfig.style.fontFamily)
+     this.updateTitleConfigData(this.props.chartTitleConfig.text, this.props.chartTitleConfig.align, this.props.chartTitleConfig.margin, this.props.chartTitleConfig.style.color, this.props.chartTitleConfig.style.fontSize, selectedOption.value, this.props.chartTitleConfig.style.fontFamily)
  }
 
  handleFontFamily(selectedOption){
-     this.updateTitleConfigData(this.props.chartTitleConfig.text, this.props.chartTitleConfig.align, this.props.chartTitleConfig.margin, this.props.chartTitleConfig.useHTML, this.props.chartTitleConfig.verticalAlign, this.props.chartTitleConfig.style.color, this.props.chartTitleConfig.style.fontSize, this.props.chartTitleConfig.style.fontWeight, selectedOption.value)
+     this.updateTitleConfigData(this.props.chartTitleConfig.text, this.props.chartTitleConfig.align, this.props.chartTitleConfig.margin, this.props.chartTitleConfig.style.color, this.props.chartTitleConfig.style.fontSize, this.props.chartTitleConfig.style.fontWeight, selectedOption.value)
  }
 
 
@@ -72,20 +64,18 @@ handleInputOnchange({target}){
     let title = document.querySelector('input[name="ChartTitle"]').value;
     let margin = document.querySelector('input[name="ChartTitleMargin"]').value;
     let fontSize = document.querySelector('input[name="ChartTitleFontSize"]').value;
-    this.updateTitleConfigData(title, this.props.chartTitleConfig.align, margin, this.props.chartTitleConfig.useHTML, this.props.chartTitleConfig.verticalAlign, this.props.chartTitleConfig.style.color, fontSize, this.props.chartTitleConfig.style.fontWeight, this.props.chartTitleConfig.style.fontFamily)
+    this.updateTitleConfigData(title, this.props.chartTitleConfig.align, margin, this.props.chartTitleConfig.style.color, fontSize, this.props.chartTitleConfig.style.fontWeight, this.props.chartTitleConfig.style.fontFamily)
 }
 
 handleChangeComplete(color) {
-     this.updateTitleConfigData(this.props.chartTitleConfig.text, this.props.chartTitleConfig.align,this.props.chartTitleConfig.margin, this.props.chartTitleConfig.useHTML, this.props.chartTitleConfig.verticalAlign, color.hex, this.props.chartTitleConfig.style.fontSize, this.props.chartTitleConfig.style.fontWeight, this.props.chartTitleConfig.style.fontFamily)
+     this.updateTitleConfigData(this.props.chartTitleConfig.text, this.props.chartTitleConfig.align,this.props.chartTitleConfig.margin, color.hex, this.props.chartTitleConfig.style.fontSize, this.props.chartTitleConfig.style.fontWeight, this.props.chartTitleConfig.style.fontFamily)
 }
 
-updateTitleConfigData(text, align,margin, useHTML, verticalAlign, color, fontSize, fontWeight, fontFamily){
+updateTitleConfigData(text, align, margin, color, fontSize, fontWeight, fontFamily){
     let chartTitleConfig = {
          text : text,
          align : align,
          margin : margin,
-         useHTML : useHTML,
-         verticalAlign : verticalAlign,
          style:{
             color: color,
             fontSize: fontSize,
@@ -176,22 +166,8 @@ updateTitleConfigData(text, align,margin, useHTML, verticalAlign, color, fontSiz
            </div>
         </div>
           <div className="ti-cols ti-col-6">
-             <div className="form-group">
-             <label>Vertical Alignment</label>
-              <Select className="react-select-box"
-                     name={'chart-aligment'}
-                     value={this.props.chartTitleConfig.verticalAlign}
-                     removeSelected={true}
-                     clearable={false}
-                     onChange={this.handleVerticalAligmnet.bind(this)}
-                     placeholder={"Vertical Alignment"}
-                     options={verticalAlignmentList}
-                 />
-           </div>
-        </div>
-          <div className="ti-cols ti-col-12">
               <div className="form-group">
-                 <label>Margin</label>
+                 <label>Margin Bottom</label>
                  <input type="number"  className="input-ctrl" onChange={this.handleInputOnchange.bind(this)} name="ChartTitleMargin"  id="chart-title" placeholder="Margin(in px)" value={this.props.chartTitleConfig.margin}  />
              </div>
          </div>

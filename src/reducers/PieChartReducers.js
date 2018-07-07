@@ -36,8 +36,6 @@ const initialDrawerState = {
          text : 'Browser Popularity in 2018',
          align : 'center',
          margin : 15,
-         useHTML : false,
-         verticalAlign : 'top',
          style:{
          	color:"#333333",
          	fontWeight: "bold",
@@ -48,12 +46,9 @@ const initialDrawerState = {
     chartSubTitleConfig : {
            text : 'Chart Sub Title should be here',
            align : 'center',
-           margin : 10,
-           useHTML : false,
-           verticalAlign : 'top',
            style:{
             color:"#99999",
-            fontWeight: "bold",
+            fontWeight: "normal",
             fontSize : 12,
             fontFamily : "Roboto"
            }

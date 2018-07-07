@@ -24,29 +24,27 @@ render() {
     },
     title: {
         text:  this.props.chartTitleConfig.text,
-        margin : this.props.chartTitleConfig.margin,
         align: this.props.chartTitleConfig.align,
-        useHTML : this.props.chartTitleConfig.useHTML,
+        margin: Number(this.props.chartTitleConfig.margin),
         verticalAlign : this.props.chartTitleConfig.verticalAlign,
-         style :{
+        style :{
          "color": this.props.chartTitleConfig.style.color,
          "fontSize": this.props.chartTitleConfig.style.fontSize + 'px',
          "fontWeight" :this.props.chartTitleConfig.style.fontWeight,
          "fontFamily" :this.props.chartTitleConfig.style.fontFamily
         }
     },
-   subtitle: {
-        text:  this.props.chartSubTitleConfig.text,
-        margin : this.props.chartSubTitleConfig.margin,
-        align: this.props.chartSubTitleConfig.align,
-        useHTML : this.props.chartSubTitleConfig.useHTML,
-        verticalAlign : this.props.chartSubTitleConfig.verticalAlign,
-         style :{
-         "color": this.props.chartSubTitleConfig.style.color,
-         "fontSize": this.props.chartSubTitleConfig.style.fontSize + 'px',
-         "fontWeight" :this.props.chartSubTitleConfig.style.fontWeight,
-         "fontFamily" :this.props.chartSubTitleConfig.style.fontFamily
-        }
+    subtitle: {
+      text:  this.props.chartSubTitleConfig.text,
+      align: this.props.chartSubTitleConfig.align,
+      margin: Number(this.props.chartSubTitleConfig.margin),
+      verticalAlign : this.props.chartSubTitleConfig.verticalAlign,
+      style :{
+       "color": this.props.chartSubTitleConfig.style.color,
+       "fontSize": this.props.chartSubTitleConfig.style.fontSize + 'px',
+       "fontWeight" :this.props.chartSubTitleConfig.style.fontWeight,
+       "fontFamily" :this.props.chartSubTitleConfig.style.fontFamily
+      }
     },
     credits :{
       enabled:false
@@ -85,7 +83,7 @@ render() {
 
 function mapStateToProps(state){
   const {chartTitleConfig, chartSubTitleConfig, chartData} = state.PieChrtsConfig
-  console.log(chartSubTitleConfig, 'chartSubTitleConfig')
+  console.log(typeof Number(chartTitleConfig.margin), 'chartSubTitleConfig')
   return {chartTitleConfig, chartSubTitleConfig, chartData}
 }
 
