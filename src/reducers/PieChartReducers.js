@@ -1,4 +1,4 @@
-import {PIE_CHART_TITLE_CONFIG, PIE_CHART_SUB_TITLE_CONFIG} from '../constants/PieChartConstants';
+import {PIE_CHART_TITLE_CONFIG, PIE_CHART_SUB_TITLE_CONFIG, PIE_CHART_SERIES_TYPE_CONFIG} from '../constants/PieChartConstants';
 
 let data = [{
             name: 'Chrome',
@@ -53,6 +53,11 @@ const initialDrawerState = {
             fontFamily : "Roboto"
            }
       },
+    ChartSeriesTypeConfig :{
+      type: "pie",
+      name : "Browsers Brands",
+      data : data
+    },
   chartData : data
 }
 
@@ -65,6 +70,10 @@ export default function PieChrtsConfig(state = initialDrawerState, action){
     case PIE_CHART_SUB_TITLE_CONFIG:
         return Object.assign({}, state, {
             chartSubTitleConfig: action.chartSubTitleConfig
+        });
+    case PIE_CHART_SERIES_TYPE_CONFIG:
+        return Object.assign({}, state, {
+            ChartSeriesTypeConfig: action.ChartSeriesTypeConfig
         });
     default:
       return state;

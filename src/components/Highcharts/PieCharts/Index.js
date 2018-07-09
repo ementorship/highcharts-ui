@@ -5,6 +5,7 @@ import ChartsGettingStarted from './GettingStarted';
 import ChartTitleConfig from './ChartTitleConfig';
 import ChartSubTitleConfig from './ChartSubTitleConfig';
 import PieChartsComponent from './PieChartConfig';
+import ChartSeriesType from './ChartSeriesTypeConfig';
 import {GetConfigActiveTabName} from '../../../actions/ConfigFilesActions';
 
 class HighchartsPieGenerator extends Component {
@@ -34,7 +35,7 @@ class HighchartsPieGenerator extends Component {
                     <li><span className={"tab-link " + (this.props.ActiveConfigTab === "ChartSize" ? "active" : "")} onClick={ (e) => this.handleCongigTab('ChartSize')}>Size</span></li>
                     <li><span className={"tab-link " + (this.props.ActiveConfigTab === "ChartTitle" ? "active" : "")} onClick={ (e) => this.handleCongigTab('ChartTitle')}>Title</span></li>
                     <li><span className={"tab-link " + (this.props.ActiveConfigTab === "ChartSubTitle" ? "active" : "")} onClick={ (e) => this.handleCongigTab('ChartSubTitle')}>Sub Title</span></li>
-                    <li><span className="tab-link" onClick={ (e) => this.handleCongigTab('GettingStarted')}>Labels</span></li>
+                    <li><span className={"tab-link " + (this.props.ActiveConfigTab === "ChartSeries" ? "active" : "")}  onClick={ (e) => this.handleCongigTab('ChartSeries')}>Series</span></li>
                     <li><span className="tab-link" onClick={ (e) => this.handleCongigTab('GettingStarted')}>Tooltips</span></li>
                     <li><span className="tab-link" onClick={ (e) => this.handleCongigTab('GettingStarted')}>Colors</span></li>
                     <li><span className="tab-link" onClick={ (e) => this.handleCongigTab('GettingStarted')}>Legands</span></li>
@@ -51,6 +52,7 @@ class HighchartsPieGenerator extends Component {
                 {this.props.ActiveConfigTab === "GettingStarted" ? (<ChartsGettingStarted />) : '' }
                 {this.props.ActiveConfigTab === "ChartTitle" ? (<ChartTitleConfig />) : '' }
                 {this.props.ActiveConfigTab === "ChartSubTitle" ? (<ChartSubTitleConfig />) : '' }
+                {this.props.ActiveConfigTab === "ChartSeries" ? (<ChartSeriesType />) : ''}
               </section>
               </div>
               <section className="chart-genrator-output">

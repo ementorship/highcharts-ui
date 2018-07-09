@@ -67,10 +67,10 @@ handleInputOnchange({target}){
 }
 
 handleChangeComplete(color) {
-     this.updateSubTitleConfigData(this.props.chartSubTitleConfig.text, this.props.chartSubTitleConfig.alig, color.hex, this.props.chartSubTitleConfig.style.fontSize, this.props.chartSubTitleConfig.style.fontWeight, this.props.chartSubTitleConfig.style.fontFamily)
+     this.updateSubTitleConfigData(this.props.chartSubTitleConfig.text, this.props.chartSubTitleConfig.align, color.hex, this.props.chartSubTitleConfig.style.fontSize, this.props.chartSubTitleConfig.style.fontWeight, this.props.chartSubTitleConfig.style.fontFamily)
 }
 
-updateSubTitleConfigData(text, align, margin, color, fontSize, fontWeight, fontFamily){
+updateSubTitleConfigData(text, align, color, fontSize, fontWeight, fontFamily){
     let chartSubTitleConfig = {
          text : text,
          align : align,
@@ -87,7 +87,7 @@ updateSubTitleConfigData(text, align, margin, color, fontSize, fontWeight, fontF
  render() {
   return (
     <div className="chart-config-creater chart-title">
-        <h4 className="form-h4">Chart Title</h4>
+        <h4 className="form-h4">Chart Sub  Title</h4>
         <div className="chart-config-form">
 
         <div className="ti-grid-row">
@@ -162,7 +162,7 @@ updateSubTitleConfigData(text, align, margin, color, fontSize, fontWeight, fontF
                      options={titleAlignmentList}
                  />
            </div>
-        </div>        
+        </div>
          </div>
         </div>
      </div>
@@ -172,7 +172,6 @@ updateSubTitleConfigData(text, align, margin, color, fontSize, fontWeight, fontF
 
 function mapStateToProps(state) {
   const {chartSubTitleConfig} = state.PieChrtsConfig
-  console.log(chartSubTitleConfig, 'chartSubTitleConfig')
   return {chartSubTitleConfig}
 }
 
