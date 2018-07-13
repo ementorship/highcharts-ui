@@ -91,9 +91,6 @@ updateChartSeriesConfigData(type, name, data){
             <input type="text"  className="input-ctrl" onChange={this.handleInputOnchange.bind(this)} name="ChartTitleFontSize"  id="title-font-size" placeholder="Font Size(in px)" value={this.props.ChartSeriesTypeConfig.name}  />
          </div>
        </div>
-
-
-
          </div>
         </div>
      </div>

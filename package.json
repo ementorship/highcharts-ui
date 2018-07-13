@@ -1,14 +1,16 @@
 {
-  "name": "sma-dashboard",
-  "description": "Social Media Analytics Dashboard with React & Redux ",
+  "name": "Highcharts-UI",
+  "description": "Highchart-UI is a way or solution to builds Intactive Charts Graphically with Highcharts Javascript Libarary",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://thetrickysolution.github.io/highcharts-ui/",
   "main": "index.js",
   "dependencies": {
     "@material/checkbox": "^0.25.0",
     "@material/drawer": "^0.34.0",
     "@material/snackbar": "^0.30.0",
     "@material/textfield": "^0.3.6",
+    "gh-pages": "^1.2.0",
     "gradient-color": "^2.0.1",
     "highcharts": "^6.0.4",
     "material-components-web": "^0.30.0",
@@ -35,14 +37,11 @@
     "sweetalert-react": "^0.4.11"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/ ",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build-js": "react-scripts build",
-    "build": "npm-run-all build-css build-js",
-    "test": "jest --coverage",
-    "test:watch": "npm test --watch",
+    "predeploy" :"npm run build",
+    "deploy":"gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "author": "Makan Singh",

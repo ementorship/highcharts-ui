@@ -10,10 +10,8 @@ import './static/css/style.css';
 import './static/css/forms.css';
 import RouteComponents from './route';
 import store from './store';
-import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     <Provider store={store}>
       <RouteComponents />
     </Provider>, document.getElementById('root'));
-registerServiceWorker();
