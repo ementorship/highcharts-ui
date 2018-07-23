@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './dist/style.css';
-
+import {NavLink} from 'react-router-dom'
 class Toolbar extends Component {
   constructor(props){
       super(props)
@@ -12,14 +12,14 @@ class Toolbar extends Component {
     <header className="header full-background">
       <section className="container">
         <nav className="navbar">
-            <a href="index.html" className="nav-brand animated fadeInUp">HighCharts UI</a>
+            <NavLink to="/" className="nav-brand animated fadeInUp">Charts UI</NavLink>
             <div className="navbar navbar-outer">
               <ul className="navbar-menu center-navbar animated fadeInUp" type="navbar">
-                  <li><a className="menu-links active" href="#">About</a></li>
-                  <li><a className="menu-links" href="#">Chart Gallery</a></li>
-                  <li><a className="menu-links" href="#">How It Works</a></li>
-                  <li><a className="menu-links" href="#">FAQs</a></li>
-                  <li><a className="menu-links" href="contact-us.html">Contact Us</a></li>
+                  <li><NavLink className="menu-links" to="/about-us">About</NavLink></li>
+                  <li><NavLink className="menu-links" to="/chart-gallery">Chart Gallery</NavLink></li>
+                  <li><NavLink className="menu-links" to="/about-us">How It Works</NavLink></li>
+                  <li><NavLink className="menu-links" to="/faqs">FAQs</NavLink></li>
+                  <li><NavLink className="menu-links" to="/about-us">Contact Us</NavLink></li>
               </ul>
             </div>
           </nav>
