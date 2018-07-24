@@ -156,3 +156,39 @@ box-shadow:0 2px 10px 1px rgba(32,33,36,.07) , 0 26px 38px 0 rgba(32,33,36,.09);
 	bottom: -8px;
 	content: "";
 }
+
+/*  footer banner*/
+.footer-banner-outer {
+	background: #1351A7;
+	padding: 4rem 5rem;
+	text-align: center;
+}
+.footer-banner-section {
+	margin: 0 0 6rem;
+}
+.footer-banner-outer h2 {
+	font-size: 4rem;
+	color: #ffffff;
+	margin: 0;
+}
+.footer-banner-outer p {
+	font-size: ;
+	color: #ffffff;
+	font-size: 2.5rem;
+	margin: 0 auto 3rem;
+	max-width: 800px;
+	line-height: 1.7;
+}
+.footer-banner-outer .btn {
+	background: #ffffff;
+	color: #2D4DE1;
+	font-size: 2rem;
+	font-weight: bold;
+	border-color: #ffffff;
+	min-width: 230px;
+}
+.footer-banner-outer .btn:hover, .footer-banner-outer .btn:focus, .footer-banner-outer .btn:active{
+	background: transparent;
+	color: #ffffff;
+	border-color: #ffffff;
+}

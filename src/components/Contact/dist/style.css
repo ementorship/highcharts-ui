@@ -1,0 +1,12 @@
+.contact-form-outer .form-group .input-ctrl {
+	min-height: 40px;
+	padding: 1rem 2rem;
+	font-size: 1.8rem;
+}
+.contact-form-outer .form-group label {
+	font-size: 1.8rem;
+}
+.contact-form-outer form {
+	box-shadow: 0 2px 4px 1px rgba(32,33,36,.05) , 0 19px 38px 0 rgba(32,33,36,.04);
+	padding: 4rem;
+}

@@ -18,8 +18,8 @@ class Toolbar extends Component {
                   <li><NavLink className="menu-links" to="/about-us">About</NavLink></li>
                   <li><NavLink className="menu-links" to="/chart-gallery">Chart Gallery</NavLink></li>
                   <li><NavLink className="menu-links" to="/about-us">How It Works</NavLink></li>
-                  <li><NavLink className="menu-links" to="/faqs">FAQs</NavLink></li>
-                  <li><NavLink className="menu-links" to="/about-us">Contact Us</NavLink></li>
+                  <li><NavLink className="menu-links" to="/faqs/highcharts-errors">FAQs</NavLink></li>
+                  <li><NavLink className="menu-links" to="/contact-us">Contact Us</NavLink></li>
               </ul>
             </div>
           </nav>

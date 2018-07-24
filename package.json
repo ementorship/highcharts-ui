@@ -16,6 +16,7 @@
     "material-components-web": "^0.30.0",
     "moment": "^2.22.1",
     "node-sass-chokidar": "^1.2.2",
+    "nodemailer": "^4.6.7",
     "npm-run-all": "^4.1.2",
     "rc-menu": "^6.2.10",
     "react": "^15.6.2",
@@ -37,8 +38,8 @@
     "sweetalert-react": "^0.4.11"
   },
   "scripts": {
-    "predeploy" :"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
